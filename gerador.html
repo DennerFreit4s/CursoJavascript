@@ -1,0 +1,24 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Gerador de Números</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script type="text/javascript" src="gerador.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-success">
+            <p class="navbar-brand">Gerador de Números para Mega-Sena</a>
+        </nav>
+        <div class="container">
+            <div class="row my-3">
+                <button type="button" class="btn btn-success" onclick="megaSena()">Mega Sena</button>
+                <button type="button" class="btn btn-danger" onclick="quina()">Quina</button>
+                <button type="button" class="btn btn-danger" onclick="duplaSena()">Dupla Sena</button>
+                <button type="button" class="btn btn-warning" onclick="lotomania()">Lotomania</button>
+                <button type="button" class="btn btn-warning" onclick="timemania()">Timemania</button>
+            </div>
+            <div class="row my-3 alert alert-success" id="numerosGerados" style="display: none;">
+            </div>  
+        </div>
+    </body>
+</html>
