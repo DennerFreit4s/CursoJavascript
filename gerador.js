@@ -112,7 +112,7 @@ function timemania() {
     numerosResultado.style.display = "block";
     numerosResultado.className = "alert alert-warning";
 
-    numerosResultado.innerHTML = "<p><strong>Lotomania<strong></p>";
+    numerosResultado.innerHTML = "<p><strong>Timemania<strong></p>";
 
     for (var result of exibir) {
         numerosResultado.innerHTML += (result + "&nbsp; &nbsp; &nbsp;");
@@ -121,5 +121,25 @@ function timemania() {
     var exibir = sortearNumeros(1, 80, 1);
     for (var result of exibir) {
         numerosResultado.innerHTML += ("<br> Time do coração: " + result + "&nbsp; &nbsp; &nbsp;");
+}
+}
+
+function diaSorte() {
+    limpar();
+    var exibir = sortearNumeros(1, 31, 7);
+
+    var numerosResultado = document.getElementById("numerosGerados");
+    numerosResultado.style.display = "block";
+    numerosResultado.className = "alert alert-warning";
+
+    numerosResultado.innerHTML = "<p><strong>Dia de Sorte<strong></p>";
+
+    for (var result of exibir) {
+        numerosResultado.innerHTML += (result + "&nbsp; &nbsp; &nbsp;");
+    }
+    limpar();
+    var exibir = sortearNumeros(1, 12, 1);
+    for (var result of exibir) {
+        numerosResultado.innerHTML += ("<br> Mês escolhido: " + result + "&nbsp; &nbsp; &nbsp;");
 }
 }
