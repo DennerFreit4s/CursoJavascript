@@ -15,6 +15,7 @@ function criarUniverso(min, max) {
 }
 
 function sortearNumeros(min, max, nums) {
+    console.log(universo);
     var maximo, posicao;
     this.min = min;
     this.max = max;
@@ -34,6 +35,30 @@ function sortearNumeros(min, max, nums) {
     }
 
     sorteado.sort(compararNumeros);
+
+    return sorteado;
+}
+
+function sortearNumeros2(min, max, nums) {
+    console.log(universo);
+    var maximo, posicao;
+    this.min = min;
+    this.max = max;
+    this.nums = nums
+    var univ = criarUniverso(min, max); // Faz um universo
+    maximo = univ.length;
+
+    // function compararNumeros(a, b) {
+    //     return a - b;
+    // }
+
+    for (var i = 0; i < nums; i++) {
+        posicao = Math.floor(Math.random() * maximo) +1;
+        console.log(posicao)
+        sorteado[i] = univ[posicao];
+    }
+
+    // sorteado.sort(compararNumeros);
 
     return sorteado;
 }
@@ -142,4 +167,19 @@ function diaSorte() {
     for (var result of exibir) {
         numerosResultado.innerHTML += ("<br> Mês escolhido: " + result + "&nbsp; &nbsp; &nbsp;");
 }
+}
+
+function superSete() {
+    limpar();
+    var exibir = sortearNumeros2(0, 9, 7);
+
+    var numerosResultado = document.getElementById("numerosGerados");
+    numerosResultado.style.display = "block";
+    numerosResultado.className = "alert alert-success";
+
+    numerosResultado.innerHTML = "<p><strong>Super Sete<strong></p>";
+
+    for (var result of exibir) {
+        numerosResultado.innerHTML += (result + "&nbsp; &nbsp; &nbsp;");
+    }
 }
