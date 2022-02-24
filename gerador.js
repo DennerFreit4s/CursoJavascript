@@ -147,7 +147,6 @@ function timemania() {
     }
     limpar();
     var exibir = sortearNumeros(1, 80, 1);
-    console.log(exibir[0]);
     var nomeTime = buscaTime(exibir[0]);
     for (var result of exibir) {
         numerosResultado.innerHTML += ("<br> Time do coração: " + nomeTime + "&nbsp; &nbsp; &nbsp;");
@@ -283,7 +282,6 @@ function buscaTime(time) {
 
 function buscaMes(mes) {
     this.mes = mes;
-    console.log(mes);
     var nomeMes;
     
     switch(mes) {
